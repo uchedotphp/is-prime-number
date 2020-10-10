@@ -13,7 +13,7 @@ export default {
       range: 10
     };
   },
-  methods: {
+  computed: {
     isPrime(n) {
       const values = [];
       for (let i = 1, max = Math.sqrt(n); i <= max; i++) {
