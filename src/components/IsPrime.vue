@@ -1,11 +1,14 @@
 <template>
   <div class="box">
-    Input Range of Prime set here:
+    Input Range of Prime:
     <el-input-number v-model="range" :min="10"></el-input-number>
 
-    <table style="width:100%">
-      <caption>
-        Monthly savings
+    <table style="width:100%; margin-top: 20px;">
+      <caption style="padding-bottom: 10px">
+        <strong>
+          Range of Prime Numbers within a set of
+          {{ range }}
+        </strong>
       </caption>
       <tr>
         <th></th>
