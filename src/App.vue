@@ -1,12 +1,16 @@
 <template>
   <div id="app">
-    
+    <IsPrime />
   </div>
 </template>
 
 <script>
+import IsPrime from "@/components/IsPrime";
 export default {
-  name: "app"
+  name: "app",
+  components: {
+    IsPrime
+  }
 };
 </script>
 
