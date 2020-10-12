@@ -3,7 +3,7 @@
     Input Range of Prime:
     <el-input-number v-model="range" :min="10"></el-input-number>
 
-    <table style="width:100%; margin-top: 20px;">
+    <table style="width:100%; margin-top: 20px;" id="head">
       <caption style="padding-bottom: 10px">
         <strong>
           Range of Prime Numbers within a set of
@@ -12,12 +12,14 @@
       </caption>
       <tr>
         <th></th>
-        <th v-for="primes in displayPrimeValues" :key="primes">{{ primes }}</th>
+        <th v-for="primes in displayPrimeValues" :key="primes">
+          {{ primes }}
+        </th>
       </tr>
       <tr v-for="primes in displayPrimeValues" :key="primes">
         <td>{{ primes }}</td>
         <td v-for="primes in displayPrimeValues" :key="primes">
-          {{ primes }}
+          <!-- {{ primes }} -->
         </td>
       </tr>
     </table>
@@ -42,7 +44,8 @@ export default {
       }
       values.sort((a, b) => a - b);
       return values.length === 2;
-    }
+    },
+    multiplication() {}
   },
   computed: {
     displayPrimeValues() {
